@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import EmailIcon from '@mui/icons-material/Email';
 import HttpsIcon from '@mui/icons-material/Https';
 import { motion } from 'framer-motion';
-import { path } from '../../utils/api'
+import { path } from '../../utils/api';
 
 
 
