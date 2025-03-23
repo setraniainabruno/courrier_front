@@ -278,7 +278,7 @@ export function Navbar() {
                                     {notifications.map((notif, index) => (
                                         <div className="notifChild" key={index}>
                                             <div className="notifChild-photo">
-                                                <img src={`http://localhost:3723/utilisateurs/${notif.photo}`} alt="photo" />
+                                                <img src={`${path}/utilisateurs/${notif.photo}`} alt="photo" />
                                             </div>
                                             <div className="infoNotifChild">
                                                 <p>{notif.email}</p>
