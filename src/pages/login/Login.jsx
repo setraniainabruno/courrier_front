@@ -199,10 +199,13 @@ export function Login() {
                         Se connecter
                     </Button>
 
+                    <div>
+
+                        <p>Email : admin@gmail.com</p>
+                        <p>Mot de passe : admin</p>
+                    </div>
                 </motion.form>
 
-                <p>Email : admin@gmail.com</p>
-                <p>Mot de passe : admin</p>
 
             </div>
         </div>
