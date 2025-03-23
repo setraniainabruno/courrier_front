@@ -201,6 +201,9 @@ export function Login() {
 
                 </motion.form>
 
+                <p>Email : admin@gmail.com</p>
+                <p>Mot de passe : admin</p>
+
             </div>
         </div>
     )
