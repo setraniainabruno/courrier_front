@@ -1,0 +1,442 @@
+.right-section {
+    margin-top: 1.4rem;
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    top: -1.4rem;
+    right: 0;
+    background-color: var(--color-white);
+    z-index: 2;
+    padding: 2rem;
+
+}
+
+.right-section .nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.right-section .nav #menu-btn {
+    display: none;
+}
+
+.right-section .nav .notif:hover,
+.right-section .nav .profile .profile-photo:hover {
+    box-shadow: none;
+}
+
+
+
+.right-section .nav .notif .iconNot {
+    color: var(--color-dark);
+}
+
+.right-section .nav .notif::before {
+    content: var(--notification-content);
+    top: 0.2rem;
+    right: 6rem;
+    color: white;
+    position: absolute;
+    background-color: var(--color-danger);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-2);
+    padding: var(--padding-notification-content);
+}
+
+
+.right-section .dark-mode {
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1rem;
+    width: 2rem;
+    cursor: pointer;
+    border-radius: 36px;
+}
+
+.right-section .dark-mode span {
+    z-index: 5;
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 36px;
+}
+
+
+
+.right-section .nav .profile .profile-photo,
+.right-section .nav .notif {
+    width: 40px;
+    height: 40px;
+    margin-top: -1.4rem;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+
+.right-section .nav .notif,
+.right-section .infoAdminDiv .parametre,
+.right-section .infoAdminDiv .deconnexion {
+    background-color: var(--color-background-light);
+    border: none;
+}
+
+.right-section .infoAdminDiv .parametre,
+.right-section .infoAdminDiv .deconnexion {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right-section .infoAdminDiv .parametre .iconParametre,
+.right-section .infoAdminDiv .deconnexion .iconDeconnexion {
+    color: var(--color-dark);
+}
+
+.notDiv {
+    position: fixed;
+    padding-right: 0.5rem;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.notDiv .notContenue {
+    width: 25rem;
+    height: 40rem;
+    margin-top: 0.5rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    box-shadow: 0 0.3rem 0.6rem var(--color-light);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.notDiv .notContenue .titreNotif {
+    min-height: 4rem;
+    border-bottom: 1px solid var(--color-background);
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.notDiv .notContenue .footerNotif {
+    min-height: 4rem;
+    border-top: 1px solid var(--color-background);
+    background-color: var(--color-white);
+    color: var(--color-info-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.notDiv .notContenue .footerNotif:hover {
+    background-color: var(--color-background-light);
+}
+
+.notDiv .notContenue .notifChildParent {
+    height: calc(100% - 9rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 1rem;
+}
+
+.notDiv .notContenue .notifChild {
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    box-shadow: 0 0.1rem 0.5rem var(--color-light);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.3s;
+}
+
+.notDiv .notContenue .notifChild:hover {
+    background-color: var(--color-background-light);
+}
+
+
+
+.notDiv .notContenue .notifChild .notifChild-photo {
+    max-width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notDiv .notContenue .notifChild .infoNotifChild {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.notDiv .notContenue .notifChild .infoNotifChild p {
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--color-dark);
+}
+
+.notDiv .notContenue .notifChild .infoNotifChild span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-info-dark);
+}
+
+.notDiv .notContenue .notifChild .plusInfo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.notDiv .notContenue .notifChild .plusInfo:hover {
+    background-color: var(--color-background-scrollbar);
+}
+
+.notDiv .notContenue .popupNotif {
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-background-light);
+    font-weight: 700;
+    height: 3rem;
+    width: 15rem;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    color: var(--color-danger);
+    transition: all 0.3s;
+}
+
+.notDiv .notContenue .popupNotif::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 13.2rem;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: var(--color-background-light) transparent transparent transparent;
+}
+
+.notDiv .notContenue .popupNotif:hover {
+    color: rgb(224, 69, 69);
+}
+
+
+.notDiv .notContenue .notifMes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    height: calc(85vh - 4.5rem);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.notDiv .notContenue .notifMes .pasDeNotif {
+    background-color: var(--color-background-light);
+    color: var(--color-dark);
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+
+}
+
+
+.infoAdminDiv {
+    position: fixed;
+    padding-right: 0.5rem;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.infoAdminDiv .infoAdminContenue,
+.infoAdminDiv .infoAdminDiv1 {
+    width: 25rem;
+    min-height: 38vh;
+    margin-top: 0.5rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    padding: 2rem;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.infoAdminDiv .infoAdminDiv1 {
+    padding: 0;
+    box-shadow: 0 0.3rem 0.6rem var(--color-light);
+}
+
+.infoAdminDiv .infoAdminContenue .profile {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 0.7rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+    padding: 0.5rem;
+    border: 1px solid var(--color-background);
+    transition: all 0.3s ease;
+}
+.infoAdminDiv .infoAdminContenue  .profile:hover{
+    background-color: var(--color-background-light);
+    border-color: transparent;
+}
+
+.infoAdminDiv .infoAdminContenue .profile .profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.info {
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+.info p {
+    color: var(--color-dark);
+}
+
+.heure{
+    height: 90%;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+}
+.heure span{
+    white-space: nowrap;
+    color: var(--color-primary);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .right-section {
+        width: 94%;
+    }
+
+    .right-section .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .notif::before {
+        right: 5.2rem;
+    }
+
+    .right-section .nav #menu-btn {
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav .profile .profile-photo,
+    .right-section .nav .notif {
+        margin-top: 0;
+    }
+
+}

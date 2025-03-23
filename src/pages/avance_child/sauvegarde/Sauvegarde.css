@@ -1,0 +1,30 @@
+.sauvegarde {
+    width: 100%;
+    min-width: 30rem;
+    height:24rem;
+    box-shadow: 0.1rem 0 5rem var(--color-light);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    /* background-color: var(--color-white); */
+    transition: height 0.3s;
+}
+
+.sauvegarde h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-light);
+}
+
+.sauvegarde .premier{
+    width: 100%;
+    padding: var(--card-padding);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}

@@ -1,0 +1,210 @@
+.profileMain {
+    width: 100%;
+    /* height: calc(100vh - 6rem); */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-white);
+    top: 5rem;
+    border-radius: var(--border-radius-1);
+    gap: 2rem;
+}
+
+.profileMain .photo-couverture {
+    width: 100%;
+    min-height: 40vh;
+    border: 5px solid var(--color-white);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: url("./couverture.jpg");
+    background-clip: padding-box;
+    background-size: cover;
+    padding: 0.2rem;
+    position: relative;
+    overflow: visible;
+}
+
+.profileMain .photo-couverture::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./couverture.jpg");
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.profileMain .photo-couverture > * {
+    position: relative;
+    z-index: 1; 
+}
+
+.profileMain .photo-couverture .photo-profile {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 6rem;
+    bottom: -5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2rem 1rem 6rem var(--color-light);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.profileMain .photo-couverture .photo-profile::after {
+    content: "Changer l'image";
+    width: 15rem;
+    height: 0rem;
+    background-color: var(--color-after-backgroung);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    transition: opacity, height 0.3s;
+    opacity: 0;
+}
+.profileMain .photo-couverture .photo-profile:hover::after{
+    opacity: 1;
+    height: 5rem;
+}
+
+.profileMain .photo-couverture .photo-profile img {
+    width: 16rem;
+    height: 16rem;
+}
+
+.profileMain .photo-couverture .photo-profile:hover {
+    box-shadow: none;
+}
+
+
+.profileMain .infoAdmin {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.profileMain .infoAdmin .droite,
+.profileMain .infoAdmin .gauche {
+    min-width: 26rem;
+    width: 50%;
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 3rem;
+}
+
+.profileMain .infoAdmin .gauche {
+    border-right: 2px solid var(--color-light);
+
+}
+.infoAdminChild{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: end;
+    min-width:25rem;
+    padding: 0.9rem;
+    gap: 1rem;
+    border: 0.5px solid var(--color-primary);
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+    transition: box-shadow, background-color  0.3s;
+}
+.infoAdminChild:hover{
+    box-shadow: none;
+    background-color: var(--color-background);
+}
+.infoAdminChild p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.modPhoto {
+    width: 25rem;
+    height: 10rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    z-index: 10;
+}
+
+.modPhoto>h3 {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid var(--color-light);
+    font-size: 1.1rem;
+    color: var(--color-primary);
+}
+
+.modPhoto>p {
+    color: var(--color-success);
+    font-size: 1rem;
+    margin: -1rem auto;
+}
+
+.modPhoto label {
+    cursor: pointer;
+    margin: -1.3rem;
+    color: var(--color-primary);
+    border-radius: var(--border-radius-1);
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-primary);
+}
+
+.modPhoto .closeA {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    color: var(--color-dark) !important;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .profileMain .infoAdmin .gauche {
+        border: none;
+    }
+    .profileMain .infoAdmin .droite {
+        padding-top: 0;
+    }
+
+    .profileMain .photo-couverture .photo-profile {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}

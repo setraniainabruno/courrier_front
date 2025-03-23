@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+  /* TODO: Font Family https://www.dfonts.org/assets/visby-round-font-family/ */
+  font-family: 'DemiBold';
+  src: url(../assets/police/VisbyRoundCF-DemiBold.woff) format('woff');
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  /* TODO: Font Family https://www.dfonts.org/assets/visby-round-font-family/ */
+  font-family: 'Heavy';
+  src: url(../assets/police/VisbyRoundCF-Heavy.woff) format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  /* TODO: Font Family https://www.dfonts.org/assets/visby-round-font-family/ */
+  font-family: 'Regular';
+  src: url(../assets/police/VisbyRoundCF-Regular.woff) format('woff');
+  font-weight: lighter;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #6C9BCF;
+  --color-login: #1c6cc7;
+  --color-danger: #c82d3c;
+  --color-danger-backgroung: #c82d3c38;
+  --color-success: #1B9C85;
+  --color-success-backgroung: #1c9c8538;
+  --color-after-backgroung: #ffffffb3;
+  --color-warning: #F7D060;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-dark: #363949;
+  --color-light: #848bc82e;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --color-btn: #e9e9e9;
+  --color-background-light: #cececea3;
+  --color-background-scrollbar: #c2c2c2a3;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+
+  --notification-content: "";
+  --padding-notification-content: 0;
+}
+
+
+.dark-mode-variables {
+  --color-after-backgroung: #202528b3;
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-btn: #3b4246;
+  --color-login: #0a4d9a;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --color-background-light: #5958585f;
+  --color-background-scrollbar: #a6a6a666;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-background-scrollbar);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-background-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins';
+  font-family: DemiBold, sans-serif;
+  /* font-family: Heavy; */
+  /* font-family: Regular; */
+  font-size: 0.88rem;
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--color-dark);
+  background-color: var(--color-background);
+}
+
+.a {
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 0.87rem;
+}
+
+small {
+  font-size: 0.76rem;
+}
+
+p {
+  color: var(--color-dark-variant);
+}
+
+
+
+
+.primary {
+  color: var(--color-primary) !important;
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 12rem auto;
+}
+
+
+
+main {
+  margin-top: 6rem;
+}
+
+main .analyse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+main .analyse>div {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+main .analyse>div:hover {
+  box-shadow: none;
+}
+
+main .analyse>div .status {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .analyse h3 {
+  margin-left: 0.6rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+    grid-template-columns: 11rem auto;
+  }
+
+  main .analyse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 0 var(--padding-1);
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  main .analyse {
+    padding: 0;
+  }
+}

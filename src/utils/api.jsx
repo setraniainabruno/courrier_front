@@ -1,0 +1,1 @@
+export const path = "https://gestion-courrier.onrender.com";

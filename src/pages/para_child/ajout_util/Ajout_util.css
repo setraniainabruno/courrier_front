@@ -1,0 +1,47 @@
+.ajout_util {
+    width: 100%;
+    min-width: 30rem;
+    height: 48rem;
+    box-shadow: 0.1rem 0 5rem var(--color-light);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    /* background-color: var(--color-white); */
+    transition: height 0.3s;
+}
+
+.ajout_util h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid var(--color-light);
+}
+
+.ajout_util .premier,
+.ajout_util .b {
+    width: 100%;
+    padding: var(--card-padding);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.ajout_util .b {
+    margin-top: 2rem;
+    border-top: 2px solid var(--color-light);
+    gap: 2rem;
+}
+
+.select {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+}
+
+.css-9npbnl-MuiFormLabel-root-MuiInputLabel-root {
+    color: var(--color-dark) !important;
+}
+

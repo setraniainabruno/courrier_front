@@ -1,0 +1,74 @@
+.information {
+    width: 100%;
+    min-width: 30rem;
+    /* height: 48rem; */
+    height: 31rem;
+    box-shadow: 0.1rem 0 5rem var(--color-light);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    /* background-color: var(--color-white); */
+    transition: height 0.3s;
+}
+
+.information h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--color-light);
+}
+
+.information .premier,
+.information .b {
+    width: 100%;
+    padding: var(--card-padding);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.information .b{
+    margin-top: 2rem;
+    border-top: 2px solid var(--color-light);
+    gap: 2rem;
+}
+
+.inputInfo label {
+    color: var(--color-dark);
+}
+
+.inputInfo input {
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+    transition: border-color 0.3s ease;
+
+}
+
+
+.inputInfo {
+    width: 20rem !important;
+}
+
+.inputInfo .MuiInputLabel-root.Mui-focused {
+    color: var(--color-primary);
+}
+
+.enreg-inf {
+    background-color: var(--color-background-light) !important;
+    color: var(--color-primary) !important;
+    width: 20rem !important;
+    padding: 0.4rem 0 !important;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+}
+.enreg-inf:disabled{
+    color: var(--color-background-light) !important;
+    background-color: var(--color-after-backgroung) !important;
+}
+
+.charge{
+    text-align: center;
+}

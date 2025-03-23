@@ -1,0 +1,29 @@
+.introuvableMain {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introuvableMain img {
+    width: 15rem;
+    height: 8rem;
+}
+
+.introuvableMain p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.introuvableMain p .redirige-dash {
+    color: #0b62c4;
+    transition: color 0.3s;
+}
+
+.introuvableMain p .redirige-dash:hover {
+    color: #1c77df;
+}

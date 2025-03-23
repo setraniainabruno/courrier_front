@@ -1,0 +1,194 @@
+.login {
+    background-color: var(--color-background);
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login::before {
+    content: '';
+    width: 15%;
+    height: 25%;
+    background-color: var(--color-login);
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    border-end-end-radius: 100%;
+    border-start-start-radius: var(--border-radius-2);
+}
+
+.login::after {
+    content: '';
+    width: 15%;
+    height: 25%;
+    background-color: var(--color-login);
+    position: absolute;
+    bottom: 20.1%;
+    right: 25%;
+    border-start-start-radius: 100%;
+    border-end-end-radius: var(--border-radius-2);
+
+}
+
+.formP {
+    width: 50%;
+    height: 60%;
+    backdrop-filter: blur(600px);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    background-color: transparent;
+    z-index: 35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftForm {
+    height: 100%;
+    width: 50%;
+    transition: display 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageL {
+    left: -3rem;
+    width: 25rem;
+    height: 25rem;
+}
+
+
+.form {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border-left: 1px solid var(--color-background);
+}
+
+.form>div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+}
+
+.check, .check-login {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    margin: 1rem 0 -1rem 0.5rem;
+    font-size: 0.8rem;
+}
+.check-login {
+    justify-content: space-between;
+}
+
+.inputLog label {
+    color: var(--color-dark);
+}
+
+.inputLog input {
+    color: var(--color-dark);
+}
+
+.inputLog {
+    width: 18rem;
+}
+
+.mailIcon,
+.mdpIcon {
+    color: var(--color-dark);
+}
+
+
+
+
+
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-wrapper .terms-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper .terms-label .label-text {
+    margin-left: 10px;
+}
+
+.checkbox-wrapper .checkbox-svg {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.1rem;
+}
+
+.checkbox-wrapper .checkbox-box {
+    fill: var(--color-after-backgroung);
+    stroke: var(--color-login);
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-wrapper .checkbox-tick {
+    stroke: var(--color-login);
+    stroke-dasharray: 172;
+    stroke-dashoffset: 172;
+    transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked+.terms-label .checkbox-box,
+.checkbox-wrapper input[type="checkbox"]:checked+.terms-label .checkbox-tick {
+    stroke-dashoffset: 0;
+}
+
+.info-incorrecte-child,
+.mdp-incorrecte-child {
+    color: var(--color-danger);
+    margin: 0 1.2rem;
+    font-size: 0.7rem;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .formP {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 20rem;
+    }
+
+    .leftForm {
+        display: none;
+    }
+
+    .form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        border-left: 1px solid var(--color-background);
+    }
+
+}
