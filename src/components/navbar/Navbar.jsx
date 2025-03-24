@@ -167,7 +167,7 @@ export function Navbar() {
     const setTitle = (titre) => {
         document.title = titre;
     }
-    
+
 
     const token = sessionStorage.getItem('token');
     const istoken = () => {
@@ -363,7 +363,7 @@ export function Navbar() {
                                     <p>{util.email}</p>
                                 </div>
                             </div>
-                            <a href='/profile' className="profile"
+                            <NavLink to={'profile'} className="profile"
                                 onMouseDown={() => {
                                     setTitle('Profile');
 
@@ -375,7 +375,7 @@ export function Navbar() {
                                 <div className="info">
                                     <p>Votre profile</p>
                                 </div>
-                            </a>
+                            </NavLink>
                             <NavLink to={'parametre'} className="profile"
                                 onMouseDown={() => {
                                     setId();
