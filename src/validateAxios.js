@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const validateAxios = axios.create({
-    baseURL: 'http://localhost:3725',
+    baseURL: 'https://gestion-courrier-app.onrender.com',
+    // baseURL: 'http://localhost:3725',
 });
 
 validateAxios.interceptors.request.use((config) => {

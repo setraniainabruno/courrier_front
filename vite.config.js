@@ -7,9 +7,5 @@ export default defineConfig({
   server: {
     port: 3725,
     open: true,
-  },
-  routes: [
-    { handle: "filesystem" },
-    { src: "/.*", "dest": "/index.html" }
-  ]
+  }
 })
