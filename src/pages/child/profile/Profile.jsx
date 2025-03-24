@@ -99,7 +99,13 @@ export function Profile() {
                     </div>
                 </motion.div>
             )}
-            <div className="photo-couverture">
+            <div
+                className="photo-couverture"
+                style={{
+                    backgroundImage: `url(${path}/utilisateurs/couverture.jpg})`,
+
+                }}
+            >
                 <div
                     className="photo-profile"
                     onClick={changeStatusModPhoto}
