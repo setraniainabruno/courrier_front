@@ -22,7 +22,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    background-image: url("./couverture.jpg");
     background-clip: padding-box;
     background-size: cover;
     padding: 0.2rem;

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import dayjs from 'dayjs';
 import validateAxios from '../../../validateAxios';
 import { path } from '../../../utils/api';
+import photobackground from '../../../../public/couverture.jpg';
 
 export function Profile() {
 
@@ -102,8 +103,7 @@ export function Profile() {
             <div
                 className="photo-couverture"
                 style={{
-                    backgroundImage: `url(${path}/utilisateurs/couverture.jpg})`,
-
+                    backgroundImage: `url(${photobackground}`,
                 }}
             >
                 <div
